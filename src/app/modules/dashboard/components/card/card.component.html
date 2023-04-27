@@ -1,0 +1,13 @@
+<div class="card p-3 bg-[#ffffff] rounded-md">
+  <div class="content">
+    <div class="flex">
+      <p class="grow uppercase text-slate-700">{{title}}</p>
+      <p [ngClass]="percentIcon == 'north_east' ? 'text-[#5bbba6]' : 'text-[#ec6447]'" class="font-medium"><mat-icon>{{percentIcon}}</mat-icon> {{percent}}</p>
+    </div>
+    <h2 class="text-[#495057]">{{value}}</h2>
+    <div class="flex items-end">
+      <a class="grow text-[#4c8ed9] underline">{{linkText}}</a>
+      <div [ngClass]="themeBg" class="p-2 rounded icon"><mat-icon [ngClass]="theme">{{cardIcon}}</mat-icon></div>
+    </div>
+  </div>
+</div>

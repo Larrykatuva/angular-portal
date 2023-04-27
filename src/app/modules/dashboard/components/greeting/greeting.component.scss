@@ -1,0 +1,18 @@
+p {
+  margin: 0 !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+.mat-icon {
+  vertical-align:middle !important;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.grow p:first-child {
+  margin-bottom: 5px !important;
+}

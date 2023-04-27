@@ -1,0 +1,33 @@
+<div class="dashboard bg-[#f3f3f9]">
+  <topbar-component></topbar-component>
+  <greeting-component></greeting-component>
+  <div class="cards grid lg:grid-cols-4 sm:grid-cols-2 gap-4 mt-3 px-5">
+    <card-component *ngFor="let cardDetail of cardDetails"
+                    [title]="cardDetail.title"
+                    [percent]="cardDetail.percent"
+                    [percentIcon]="cardDetail.percentIcon"
+                    [value]="cardDetail.value"
+                    [linkText]="cardDetail.linkText"
+                    [linkValue]="cardDetail.linkValue"
+                    [cardIcon]="cardDetail.cardIcon"
+                    [theme]="cardDetail.theme"
+                    [themeBg]="cardDetail.themeBg">
+    </card-component>
+  </div>
+  <div class="grid lg:grid-cols-6 gap-4 px-5 mt-3">
+    <div class="lg:col-span-4 md:col-span-5">
+      <revenue-component></revenue-component>
+    </div>
+    <div class="lg:col-span-2">
+      <location-component></location-component>
+    </div>
+  </div>
+  <div class="lg:flex px-5 justify-evenly">
+    <div class="grow lg:mr-2 md:mt-3 sm:mt-2 xl:mt-1">
+      <sales-component></sales-component>
+    </div>
+    <div class="grow lg:ml-2 md:mt-3 sm:mt-2 xl:mt-1">
+      <sales-component></sales-component>
+    </div>
+  </div>
+</div>

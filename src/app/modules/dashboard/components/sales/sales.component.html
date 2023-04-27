@@ -1,0 +1,46 @@
+<div class="bg-[#ffffff] rounded sale">
+  <div class="align-middle flex p-3 justify-between p-5">
+    <p class="grow font-medium text-[#495057]">Best Selling Products</p>
+    <button class="bg-[#ecedf3] text-[#3a497b] hover:bg-[#3a497b] hover:text-[#ffffff] rounded-sm px-3">Export Report</button>
+  </div>
+  <div class="border-t border-b-gray-500">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+      <ng-container matColumnDef="position">
+        <td mat-cell *matCellDef="let element">
+          <div class="flex p-2">
+            <img class="object-fill h-10 w-10 bg-[#f3f6f9] rounded-sm p-1 mr-2" src="assets/shirt.png">
+            <div class="ml-1">
+              <p class="font-normal text-[#495057]">Branded T-Shirts</p>
+              <p class="text-[#878a99] product-date">24 Apr 2021</p>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <td mat-cell *matCellDef="let element">
+          <div class="">
+            <p class="font-medium text-[#495057]">$ 99.00</p>
+            <p class="text-[#878a99] product-date">Price</p>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="weight">
+        <td mat-cell *matCellDef="let element">
+          <div class="">
+            <p class="font-medium text-[#495057]">62</p>
+            <p class="text-[#878a99] product-date">Orders</p>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="symbol">
+        <td mat-cell *matCellDef="let element">
+          <div class="">
+            <p class="font-medium text-[#495057]">510</p>
+            <p class="text-[#878a99] product-date">Stock</p>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
