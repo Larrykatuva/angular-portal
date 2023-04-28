@@ -1,5 +1,5 @@
 <mat-sidenav-container class="min-h-screen">
-  <mat-sidenav #sidenav mode="side" opened={{toggle}}>
+  <mat-sidenav #sidenav mode="side" opened={{toggle}} fixedInViewport="true">
     <app-sidebar [navItemsList]="portal_url_list"></app-sidebar>
   </mat-sidenav>
   <mat-sidenav-content>

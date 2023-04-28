@@ -2,13 +2,6 @@ table {
   width: 100%;
 }
 
-.product-date{
-  margin: 0!important;
-  padding: 0!important;
-  margin-top: -10px !important;
-  font-size: 13px;
-}
-
 .paginator .box div{
   font-size: 14px;
   padding-top: 3px;
@@ -18,4 +11,8 @@ table {
 .paginator .box div .mat-icon{
   padding-top: -3px !important;
   font-size: 20px;
+}
+
+td.mat-cell{
+  border-bottom-style: none;
 }

@@ -12,6 +12,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', amount: 20},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', amount: 20},
   {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', amount: 20},
+  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', amount: 20},
+  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', amount: 20},
+  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', amount: 20},
 ];
 
 @Component({

@@ -1,5 +1,5 @@
 <div class="bg-[#ffffff] rounded sale">
-  <div class="align-middle flex p-3 justify-between p-5">
+  <div class="align-middle flex justify-between p-5">
     <p class="grow font-medium text-[#495057]">Best Selling Products</p>
     <button class="bg-[#ecedf3] text-[#3a497b] hover:bg-[#3a497b] hover:text-[#ffffff] rounded-sm px-3">Export Report</button>
   </div>
@@ -40,7 +40,21 @@
           </div>
         </td>
       </ng-container>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="hover:bg-[#e9ebec]"></tr>
     </table>
+  </div>
+  <div class="flex p-3 justify-between paginator">
+    <p class="grow">Showing 4 of 125 Results</p>
+    <div class="flex text-center align-middle box">
+      <div class="h-7 w-7 border border-gray-500 rounded mr-2">
+        <mat-icon>arrow_left_alt</mat-icon>
+      </div>
+      <div class="h-7 w-7 border border-[#878a99] rounded mr-2">1</div>
+      <div class="h-7 w-7 border border-[#405189] bg-[#405189] text-[#ffffff] rounded mr-2">2</div>
+      <div class="h-7 w-7 border border-[#878a99] rounded mr-2">3</div>
+      <div class="h-7 w-7 border border-[#878a99] rounded">
+        <mat-icon>arrow_right</mat-icon>
+      </div>
+    </div>
   </div>
 </div>

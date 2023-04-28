@@ -1,0 +1,7 @@
+<div class="categories p-3 text-[#878a99]">
+  <p class="uppercase font-medium">Top categories</p>
+  <div class="flex" *ngFor="let category of categories; let i = index">
+    <p class="grow">{{i+1}}. {{category.category}}</p>
+    <p>({{category.value}})</p>
+  </div>
+</div>
