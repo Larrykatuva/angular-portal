@@ -1,0 +1,25 @@
+<div class="mt-2 metadata">
+  <div class="grid grid-cols-4 gap-4">
+    <div *ngFor="let row of records" class="col-span-4 md:col-span-2 lg:col-span-1 flex border border-[#eef0f1] border-dashed rounded p-2">
+      <button class="p-2 text-[#58b49c]"><mat-icon>{{row.icon}}</mat-icon></button>
+      <div class="ml-3 grow">
+        <p class="text-[#878a99]">{{row.value}}: </p>
+        <p class="text-[#495057] font-medium">{{row.desc}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 mt-8">
+    <div class="sizes col-span-2 lg:col-span-1">
+      <p class="font-medium text-slate-700">Sizes :</p>
+      <div class="flex mt-2">
+        <div *ngFor="let size of sizes" class="rounded-full pt-1.5 bg-[#f3f3f7] text-[#4b5b90] h-8 w-8 align-middle text-center mr-2">{{size}}</div>
+      </div>
+    </div>
+    <div class="colors col-span-2 lg:col-span-1 mt-3 lg:mt-0">
+      <p class="font-medium text-slate-700">Colors :</p>
+      <div class="flex mt-2">
+        <div *ngFor="let color of colors" class="rounded-full pt-1.5 border border-[#] bg-[#ffffff] h-7 w-7 align-middle mr-2"><div class="h-3.5 w-3.5 rounded-full m-auto" [ngClass]="generateColor(color)"></div></div>
+      </div>
+    </div>
+  </div>
+</div>

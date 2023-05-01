@@ -4,7 +4,8 @@ import {MainComponent} from "./main/main.component";
 
 const routes: Routes = [
   { path: '', component: MainComponent, children: [
-      { path: '', loadChildren: () => import('../modules/dashboard/dashboard.module').then(module => module.DashboardModule)}
+      { path: '', loadChildren: () => import('../modules/dashboard/dashboard.module').then(module => module.DashboardModule)},
+      { path: 'products', loadChildren: () => import('../modules/products/products.module').then(module => module.ProductsModule)}
     ]
   }
 ];
