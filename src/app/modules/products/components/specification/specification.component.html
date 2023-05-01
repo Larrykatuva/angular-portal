@@ -1,0 +1,24 @@
+<div class="mt-5 specification">
+  <p class="font-medium text-slate-700">Product Description :</p>
+  <mat-tab-group mat-align-tabs="start" color="#">
+    <mat-tab label="Specification">
+      <div class="border border-t-0 border-[#e9ebec] p-8 spec">
+        <div class="grid grid-cols-4 border-b border-[#e9ebec] " *ngFor="let specification of specifications">
+          <p class="col-span-2 md:col-span-1 text-sm font-medium">{{specification.spec}}</p>
+          <p class="col-span-2 md:col-span-3">{{specification.value}}</p>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Details">
+      <div class="border border-t-0 border-[#e9ebec] p-8">
+        <p class="font-medium text-slate-700 text-lg">Tommy Hilfiger Sweatshirt for Men (Pink)</p>
+        <p class="font-normal text-[#878a99] content">Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton.
+          Material composition is 100% organic cotton. This is one of the world’s leading designer lifestyle brands and is internationally
+          recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.</p>
+        <div class="content">
+          <p class="text-slate-700" *ngFor="let detail of details">{{detail}}</p>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
