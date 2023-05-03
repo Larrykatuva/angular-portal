@@ -13,23 +13,48 @@
       </div>
       <p class="text-[#878a99] text-center numbers">Total <span class="font-medium">5.5k</span> reviews</p>
       <div class="progress">
-        <div class="flex items-center mb-3">
-          <p class="font-medium text-[#495057]">5 start</p>
+        <div class="flex items-center mb-3" *ngFor="let rating of ratings">
+          <p class="font-medium text-[#495057]">{{rating.value}} start</p>
           <div class="px-5 grow">
             <div class="bg-gray-200 rounded-full h-1.5">
-              <div class="bg-[#58b49c] h-1.5 rounded-full" style="width: 45%"></div>
+              <div class="bg-[#58b49c] h-1.5 rounded-full" [style]="getProgressLength(rating.percentage)" [ngClass]="getProgressProps(rating.percentage)"></div>
             </div>
           </div>
-          <p class="text-[#878a99]">2758</p>
+          <p class="text-[#878a99]">{{rating.total}}</p>
         </div>
-        <div class="flex items-center">
-          <p class="font-medium text-[#495057]">5 start</p>
-          <div class="px-5 grow">
-            <div class="bg-gray-200 rounded-full h-1.5">
-              <div class="bg-[#58b49c] h-1.5 rounded-full" style="width: 45%"></div>
-            </div>
+      </div>
+    </div>
+    <div class="col-span-6 mt-3 lg:mt-0 lg:col-span-4 reviews">
+      <p class="font-medium text-slate-700">Reviews :</p>
+      <div class="max-h-48 overflow-y-auto">
+        <div class="border border-dashed border-[#e9ebec] p-4 rounded mb-3">
+          <div class="flex items-center">
+            <button class="bg-[#58b49c] rounded lg:rounded-full px-1 lg:px-3 text-[#ffffff] star mr-2 lg:mr-5">
+              <mat-icon>star</mat-icon>4.2
+            </button>
+            <p  class="top border-l border-[#878a99] pl-5 py-1 grow text-[#878a99]">Superb sweatshirt. I loved it. It is for winter.</p>
           </div>
-          <p class="text-[#878a99]">2758</p>
+          <div class="flex mt-3">
+            <img src="https://themes.themesbrand.com/velzon/angular/default/assets/images/small/img-12.jpg" class="mx-1 h-14 w-14 rounded">
+            <img src="https://themes.themesbrand.com/velzon/angular/default/assets/images/small/img-11.jpg" class="mx-1 h-14 w-14 rounded">
+            <img src="https://themes.themesbrand.com/velzon/angular/default/assets/images/small/img-10.jpg" class="mx-1 h-14 w-14 rounded">
+          </div>
+          <div class="flex justify-between mt-4">
+            <p class="commentor text-[#495057] font-medium">Henry</p>
+            <p class="text-[#878a99] font-normal">12 Jul, 21</p>
+          </div>
+        </div>
+        <div class="border border-dashed border-[#e9ebec] p-4 rounded mb-3">
+          <div class="flex items-center">
+            <button class="bg-[#58b49c] rounded lg:rounded-full px-1 lg:px-3 text-[#ffffff] star mr-2 lg:mr-5">
+              <mat-icon>star</mat-icon>4.0
+            </button>
+            <p  class="top border-l border-[#878a99] pl-5 py-1 grow text-[#878a99]">Great at this price, Product quality and look is awesome.</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <p class="commentor text-[#495057] font-medium">Nancy</p>
+            <p class="text-[#878a99] font-normal">06 Jul, 21</p>
+          </div>
         </div>
       </div>
     </div>
