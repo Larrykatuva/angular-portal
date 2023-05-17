@@ -1,0 +1,11 @@
+<div class="mt-2 md:mt-0 md:col-span-1 bg-[#ffffff] p-4 rounded card transform transition duration-500 hover:scale-105">
+  <div class="flex">
+    <p class="grow uppercase text-[#878a99] font-medium">{{title}}</p>
+    <div class="example-button-container">
+      <button class="h-10 w-10 rounded-full" [ngClass]="getThemeBg(themeBg)">
+        <mat-icon class="card-icon" [ngClass]="getTextTheme(theme)">{{icon}}</mat-icon>
+      </button>
+    </div>
+  </div>
+  <h2 class="text-[#495057]">{{value}}</h2>
+</div>

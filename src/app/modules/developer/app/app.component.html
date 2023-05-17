@@ -1,0 +1,33 @@
+<div class="bg-[#f3f3f9] pb-5 min-h-screen">
+  <div class="topbar bg-[#ffffff] border-t border-b-gray-500">
+    <div class="content flex justify-between pt-2 px-5">
+      <p class="font-bold text-base uppercase text-slate-600 text-center">APPS</p>
+      <p class="text-slate-400">
+        <span class="pr-3 text-slate-600">Apps</span>/<span class="pl-3">Registered Apps</span>
+      </p>
+    </div>
+  </div>
+  <div class="content mt-3 md:mt-5 grid grid-cols-12 px-2 lg:px-5 gap-4">
+    <div class="scopes bg-[#ffffff] p-4 lg:p-5 lg:min-h-screen col-span-12 lg:col-span-3 rounded">
+      <button class="w-full bg-[#405189] text-[#ffffff] py-3 rounded">
+        <mat-icon class="scope-btn-icon">add</mat-icon> Add Scope
+      </button>
+      <div class="scope-list">
+        <a *ngFor="let scope of scopes" class="flex justify-between bg-[#f3f6f9] p-3 text-[#405189] mt-3 align-middle rounded cursor-pointer">
+          <p class="font-medium uppercase">{{scope.name}}</p>
+          <p class="font-semibold">{{scope.total}}</p>
+        </a>
+      </div>
+    </div>
+    <div class="apps col-span-12 lg:col-span-9 lg:min-h-screen">
+      <div class="md:grid grid-cols-3 gap-4">
+        <developer-card-component *ngFor="let detail of cardData"
+                                  [icon]="detail.icon" [theme]="detail.theme" [themeBg]="detail.themeBg" [title]="detail.title" [value]="detail.value"
+        ></developer-card-component>
+      </div>
+      <div class="bg-[#ffffff] rounded min-h-screen mt-5">
+        <app-table-component></app-table-component>
+      </div>
+    </div>
+  </div>
+</div>

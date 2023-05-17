@@ -1,0 +1,45 @@
+<div class="bg-[#ffffff] rounded">
+  <div class="align-middle flex justify-between p-5">
+    <p class="grow font-medium text-[#495057]">Recent Orders</p>
+    <button class="bg-[#ecedf3] text-[#3a497b] hover:bg-[#3a497b] hover:text-[#ffffff] rounded-sm px-3">Report</button>
+  </div>
+  <div class="border-t border-b-gray-500">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+      <ng-container matColumnDef="orderId">
+        <th mat-header-cell *matHeaderCellDef> Order Id</th>
+        <td mat-cell *matCellDef="let element">
+          <a class="text-[#405189] font-medium cursor-pointer"># {{element.orderId}}</a>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="customer">
+        <th mat-header-cell *matHeaderCellDef> Customer </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="flex p-1.5">
+            <img class="h-8 w-8 rounded-full mr-4"
+                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                 alt="">
+            <p class="align-middle pt-2">{{element.customer}}</p>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="product">
+        <th mat-header-cell *matHeaderCellDef> Product </th>
+        <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+      </ng-container>
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef> Amount </th>
+        <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+      </ng-container>
+      <ng-container matColumnDef="vendor">
+        <th mat-header-cell *matHeaderCellDef> Vendor </th>
+        <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
+      </ng-container>
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" class="bg-[#f3f6f9]"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
