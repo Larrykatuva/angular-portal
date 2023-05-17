@@ -13,7 +13,6 @@
     <mat-nav-list *ngIf="nav_item.children.length > 0" class="bg-[#405189] text-[#e6e8f0] md:p-1.5 md:-mx-5 md:-mb-2.5 rounded">
       <a *ngFor="let nav_item_link of nav_item.children" mat-list-item routerLink="{{ nav_item_link.link }}"
          [ngClass]="{'active': false}" class="text-[#e6e8f0] md:py-2 rounded">
-
         <mat-icon matTooltipPosition="right"
                   class="text-[#e6e8f0] md:mr-3">horizontal_rule
         </mat-icon>

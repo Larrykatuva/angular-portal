@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+}
+
+.paginator .box div{
+  font-size: 14px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+
+.paginator .box div .mat-icon{
+  padding-top: -3px !important;
+  font-size: 20px;
+}
+
+td.mat-cell{
+  border-bottom-style: none;
+}
